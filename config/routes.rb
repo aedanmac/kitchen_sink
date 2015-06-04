@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
+  
+  get "recipes/" => "recipes#index"
+  get "recipes/" => "recipes#welcome"
+  get "recipes/new" => "recipes#new", as: :new_recipe
+  get "recipes/:id" => "recipes#show", as: :recipe
+  get "recipes/:id/edit" => "recipes#edit", as: :edit_recipe
+  post "recipes/" => "recipes#create"
+  patch "recipes/:id" => "recipes#update"
+  delete "recipes/:id" => "recipes#destroy"
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'recipes#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
