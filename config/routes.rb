@@ -8,8 +8,14 @@ Rails.application.routes.draw do
   post "recipes/" => "recipes#create"
   patch "recipes/:id" => "recipes#update"
   delete "recipes/:id" => "recipes#destroy"
-
-  
+  #this is setting the root route to users index
+  root 'users#index', as: :users
+  #route to return out sign up form
+  get 'users/new' => 'users#new', as: :new_user
+  #a route to post our user from to
+  post '/' => 'users#create'
+  #this is going to display the new form
+  get 'sessions/new' => 'sessions#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
