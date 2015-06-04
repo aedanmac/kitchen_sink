@@ -15,10 +15,9 @@ Rails.application.routes.draw do
   #a route to post our user from to
   post '/' => 'users#create'
   #this is going to display the new form
-  get 'sessions/new' => 'sessions#new'
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
+  get 'sessions/new' => 'sessions#new', as: :new_session
+  #this will create the new session (the login post)
+  post 'sessions/new' => 'sessions#create', as: :create_session
   # You can have the root of your site routed with "root"
    root 'recipes#index'
 
