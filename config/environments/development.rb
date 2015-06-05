@@ -35,6 +35,19 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
+  #this is the paperclip amazon info
+  config.paperclip_defaults = {
+
+storage: :s3,
+  s3_credentials: {
+    bucket: ENV['recipes4566'],
+    access_key_id: ENV['AKIAIYSDJEBLL3B3UABQ'],
+    secret_access_key: ENV['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']
+  }
+}
+
+  #Add paperclip functionality
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
