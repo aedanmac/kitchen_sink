@@ -1,23 +1,35 @@
 Rails.application.routes.draw do
   
   get "recipes/" => "recipes#index"
+  #this is the welcome page
   get "recipes/" => "recipes#welcome"
+  #this is going to create a new recipe
   get "recipes/new" => "recipes#new", as: :new_recipe
-  get "recipes/:id" => "recipes#show", as: :recipe
-  get "recipes/:id/edit" => "recipes#edit", as: :edit_recipe
+  #this is the link to create
   post "recipes/" => "recipes#create"
+  #this is the root route to show the recipes
+  get "recipes/:id" => "recipes#show", as: :recipe
+  #this is the route to edit each specific recipe which can only be accesed from indiviudal recipe s
+  get "recipes/:id/edit" => "recipes#edit", as: :edit_recipe
   patch "recipes/:id" => "recipes#update"
   delete "recipes/:id" => "recipes#destroy"
-  #this is setting the root route to users index
-  root 'users#index', as: :users
+  
+
+  #this is setting the route to users index
+  get 'users/' => "users#index"
   #route to return out sign up form
   get 'users/new' => 'users#new', as: :new_user
   #a route to post our user from to
-  post '/' => 'users#create'
+  post 'users/' => 'users#create'
+
+
   #this is going to display the new form
   get 'sessions/new' => 'sessions#new', as: :new_session
   #this will create the new session (the login post)
   post 'sessions/new' => 'sessions#create', as: :create_session
+  #this will log out the current session
+  get "/sessions/destroy" => "sessions#destroy", as: :destroy_session
+
   # You can have the root of your site routed with "root"
    root 'recipes#index'
 

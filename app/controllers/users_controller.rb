@@ -12,8 +12,8 @@ class UsersController < ApplicationController
 
       if User.create(user_params)
         #redicret to signed in
-        flash[:success] = 'you are registered'
-        redirect_to users_path
+        flash[:success] = 'You are registered'
+        redirect_to recipes_path
       else
 
         flash[:error] = 'registration has failed'
