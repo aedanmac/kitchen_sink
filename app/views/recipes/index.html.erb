@@ -1,20 +1,4 @@
-  <nav>
-    <div class="nav-wrapper">
-      <div>
-      <a url="http://www.seriouseats.com/images/20100727-burger-spatula-jpg" class="brand-logo right"></a>
-      </div>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="recipes">Recipes</a></li>
-        <li><a href="sessions/new">Log In</a></li>
-      </ul>
-      	<form>
-        <div class=" right input-field">
-          <input id="search" type="search" required>
-          <label for="search"><i class="mdi-action-search"></i></label>
-          <i class="mdi-navigation-close"></i>
-        </div>
-      </form>
-  </nav>
+
 
 <h1>Today's Recipes</h1>
 
@@ -22,8 +6,8 @@
     <% @recipes.each do |recipe| %>
         <li>
             <strong> <%= recipe.name %> </strong> - <%= recipe.directions %>
-            <%= link_to "More Info", recipe_path(recipe) %>
-            
+            <%= link_to "More Info", recipe_path(recipe) %>  
         </li>
+        <%= link_to "Add A Recipe", new_recipe_path %>
     <% end %>
 </ul>

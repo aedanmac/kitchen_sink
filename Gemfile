@@ -25,7 +25,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
-
+#this is the paperclip plugin to handle images for recipes
+gem "paperclip", "~> 4.2"
+#this was added for rails and heroku functionality
+gem 'rails_12factor', group: :production
 # Use Unicorn as the app server
 # gem 'unicorn'
 
