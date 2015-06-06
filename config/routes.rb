@@ -60,6 +60,9 @@ Rails.application.routes.draw do
   #     resource :seller
   #   end
 
+  resources :recipes
+  resources :photos
+
   # Example resource route with more complex sub-resources:
   #   resources :products do
   #     resources :comments

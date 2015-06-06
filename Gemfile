@@ -30,9 +30,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #this is the paperclip plugin to handle images for recipes
 gem "paperclip", "~> 4.2"
 #this was added for rails and heroku functionality
-gem 'rails_12factor', group: :production
+gem 'rails_12factor', group: :production  
 # Use Unicorn as the app server
 # gem 'unicorn'
+#This is the amazon web server gem
+gem 'aws-sdk', '< 2.0'
+#this is the simple form gem
+gem 'simple_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

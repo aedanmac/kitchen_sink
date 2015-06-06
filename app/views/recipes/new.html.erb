@@ -16,7 +16,10 @@
         <%= f.label :ingredients %>
         <%= f.text_field :ingredients %>
     </div>
-
+    <div>
+        <%= simple_form_for @recipe, :html => {:multipart => true} do |f| %>
+        <%= form.input :avatar, as: :file %>
+    </div>  
     
 
     <%= f.submit "Add new recipe!" %>
@@ -24,3 +27,5 @@
 <% end %>
 
 <%= link_to "Back to the list!", recipes_path %>
+
+<% end %>

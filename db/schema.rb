@@ -11,18 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150604021609) do
+ActiveRecord::Schema.define(version: 20150605215214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "photos", force: :cascade do |t|
+    t.date     "photo_date"
+    t.integer  "recipe_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "photos", ["recipe_id"], name: "index_photos_on_recipe_id", using: :btree
 
   create_table "recipes", force: :cascade do |t|
     t.string   "name"
     t.string   "directions"
     t.string   "ingredients"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.integer  "user_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "recipes", ["user_id"], name: "index_recipes_on_user_id", using: :btree
@@ -31,9 +48,14 @@ ActiveRecord::Schema.define(version: 20150604021609) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "name"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
+  add_foreign_key "photos", "recipes"
   add_foreign_key "recipes", "users"
 end

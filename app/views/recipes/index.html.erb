@@ -5,7 +5,7 @@
 <ul>
     <% @recipes.each do |recipe| %>
         <li>
-            <strong> <%= recipe.name %> </strong> - <%= recipe.directions %>
+            <strong> <%= recipe.name %> </strong> - <%= recipe.directions %> 
             <%= link_to "More Info", recipe_path(recipe) %>  
         </li>
         <%= link_to "Add A Recipe", new_recipe_path %>
