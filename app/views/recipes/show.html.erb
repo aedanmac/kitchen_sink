@@ -1,7 +1,7 @@
 <h1> <%= @recipe.name %> </h1>
 
 <p>This recipe is for <%= @recipe.name %> and you need to <%= @recipe.directions %>, and you will need <%= @recipe.ingredients %> in order to make it.</p>
-<%= image_tag @recipe.avatar.url(:medium) %>
+
 
 <%= link_to "Edit this recipe.", edit_recipe_path(@recipe) %>
 <%= link_to "Back to the list!", recipes_path %>
