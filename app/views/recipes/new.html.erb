@@ -17,14 +17,18 @@
         <%= f.text_field :ingredients %>
     </div>
     <div>
-        <%= simple_form_for @recipe, :html => {:multipart => true} do |f| %>
-       
-    </div>  
+        <%= f.label :photo_date %>
+        <%= f.date_field :photo_date %>
+    </div>
+
+    <div>
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+    </div>
     
 
     <%= f.submit "Add new recipe!" %>
 
-<% end %>
 
 <%= link_to "Back to the list!", recipes_path %>
 
