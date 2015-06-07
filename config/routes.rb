@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   get "/sessions/destroy" => "sessions#destroy", as: :destroy_session
 
   # You can have the root of your site routed with "root"
-   root 'recipes#index'
+   root 'recipes#welcome'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
