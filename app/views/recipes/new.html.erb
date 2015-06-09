@@ -18,17 +18,7 @@
         <%= f.label :ingredients %>
         <%= f.text_field :ingredients %>
     </div>
-    <div>
-
-        <%= f.label :photo_date %>
-        <%= f.date_field :photo_date %>
-    </div>
-
-    <div>
-        <%= f.label :image %>
-        <%= f.file_field :image %>
-    </div>
-
+   
     
 
     <%= f.submit "Add new recipe!" %>
@@ -36,4 +26,5 @@
 
 <%= link_to "Back to the list!", recipes_path %>
 
+<% end %>
 
