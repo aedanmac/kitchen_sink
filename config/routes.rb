@@ -59,7 +59,7 @@ Rails.application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
-
+  #get "photos/:id" => "photos#show", as: :photo
   resources :recipes
   resources :photos
 

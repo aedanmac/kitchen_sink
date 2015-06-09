@@ -7,16 +7,19 @@
         <%= f.text_field :name %>
     </div>
 
-    <div>
+    <div class="form group form-group-lg">
         <%= f.label :directions %>
-        <%= f.text_field :directions %>
+    <div class="textbox">
+        <%= f.text_field :directions, :size => "50x30"%>
+    </div>
     </div>
 
-    <div>
+    <div class="form group form-group-lg">
         <%= f.label :ingredients %>
         <%= f.text_field :ingredients %>
     </div>
     <div>
+
         <%= f.label :photo_date %>
         <%= f.date_field :photo_date %>
     </div>
@@ -25,6 +28,7 @@
         <%= f.label :image %>
         <%= f.file_field :image %>
     </div>
+
     
 
     <%= f.submit "Add new recipe!" %>
@@ -32,4 +36,4 @@
 
 <%= link_to "Back to the list!", recipes_path %>
 
-<% end %>
+
