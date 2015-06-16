@@ -1,0 +1,111 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/aedanmacdonald/big_hippo/projects/everything_but_/kitchen_sink/app/models/user.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/aedanmacdonald/big_hippo/projects/everything_but_/kitchen_sink/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/aedanmacdonald/big_hippo/projects/everything_but_/kitchen_sink/app/helpers/photos_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/aedanmacdonald/big_hippo/projects/everything_but_/kitchen_sink/app/helpers/recipes_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/aedanmacdonald/big_hippo/projects/everything_but_/kitchen_sink/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/aedanmacdonald/big_hippo/projects/everything_but_/kitchen_sink/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/aedanmacdonald/big_hippo/projects/everything_but_/kitchen_sink/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/aedanmacdonald/big_hippo/projects/everything_but_/kitchen_sink/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/aedanmacdonald/big_hippo/projects/everything_but_/kitchen_sink/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        null,
+        2,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1434414715
+  }
+}

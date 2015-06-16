@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
 	def create
 
-      if User.create(user_params)
+      if User.new(user_params).save
         #redicret to signed in
         flash[:success] = 'You are registered'
         redirect_to recipes_path
