@@ -35,8 +35,8 @@ gem 'rails_12factor', group: :production
 # gem 'unicorn'
 #This is the amazon web server gem
 gem 'aws-sdk', '< 2.0'
-#this is the simple form gem
-gem 'simple_form'
+
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
