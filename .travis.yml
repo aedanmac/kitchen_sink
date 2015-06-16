@@ -1,11 +1,18 @@
 language: ruby
 rvm:
-  - 2.0.0-p481
+- 2.0.0-p481
 branches:
   only:
-    - master
+  - master
 install:
-  - "travis_retry bundle install"  
-
+- travis_retry bundle install
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
+- psql -c 'create database travis_ci_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: NoPLap3zq01nellIiGFCEj8I8pk7oc/QFqdGNmi661FQlpeZ3aoh1egm+vyy7PPKkkyBfpBeMQ9f1jtujJou3y+rADs/z72gdQMu/+wFJfdMjwe2BB0BCDX8Xi0cNHY0EgijrpEZob+vLoh1JG+FX7qqF75E6Q4+Z7lovmST2QVkvBrOyqiZwWHNdlgFkgMvGDNIwlC04Eyepb0aVHoPSEuuvcNyVzaBBw8ONrvYzyN5RWpanuPWha85ZI5ak5r2LYxrp2pyaKRf0A+IB9bep+se6KWYpwkBQsb/gdbBdC7jZtdntAop9w1FfCBwLLe1N0XpupuL8PFecbFZRiD4t9MqjvF12x9FVXWuhHOVGbZDMaAhf/krSTUyBwqlzu95o+vFGuaYMWRwuwdbtpFqSc3MZG4h+kNp93ARgyARg+kWE4Fz8OyKk+1ZyxAR+A2OxUMMLpTWsX/E6WPUvrSrrYfjc1bbSR+G1eKYnxFQlDukK4KOgr0wQ3+1v6bTGZICSP8XC5J96tDAJbMc8lUrBLjKve0/E662bFtPHzps4JejzYQbBejhTSk9Yo+Bv/UIvJGe66ZuNc1OO5crVX2/xb39mv76+YrN7v4iBG5xMUS0FCYtjPbQ7/IVi0aK/czBHcKZ3BY/hPUIoWloIQIJ2lqtiwI7DGaSL+GxFaWmsiw=
+app: glacial-fortress-8120
+  run:
+    - "rake db:migrate"
+    - restart
